@@ -26,11 +26,13 @@ FROM thesuhu/docker-node-angular
 RUN mkdir -p /usr/src/myapp
 WORKDIR /usr/src/myapp
 
-COPY <host directory>/. .
+COPY <host directory>/package*.json ./
 
 RUN npm i --verbose
 
-CMD ng serve --host 0.0.0.0 
+COPY <host directory>/. .
+
+CMD ng serve 
 ```
 
 Build the Dockerfile.
