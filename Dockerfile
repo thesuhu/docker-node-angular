@@ -8,7 +8,7 @@ RUN apt-get update \
     && apt-get install -y apt-utils
 
 # install angular
-RUN npm install -g @angular/cli@12.2.17
+RUN npm install -g @angular/cli@12
 RUN ng -v
 
 RUN mkdir -p /usr/src/myapp
