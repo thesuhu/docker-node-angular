@@ -1,7 +1,5 @@
 FROM node:14
 
-RUN export DEBIAN_FRONTEND=noninteractive 
-
 RUN apt-get update \
     && apt-get install -y libaio1 \
     && apt-get install -y build-essential \
@@ -10,5 +8,8 @@ RUN apt-get update \
     && apt-get install -y apt-utils
 
 # install angular
-RUN npm install -g @angular/cli@12.0.1
+RUN npm install -g @angular/cli@12.2.17
 RUN ng -v
+
+RUN mkdir -p /usr/src/myapp
+WORKDIR /usr/src/myapp
