@@ -6,52 +6,21 @@ Docker images used to create containers ready with Node.js and Angular. This doc
 
 ## Usage
 
-Within your Dockerfile:
+Just run the following command to run the container:
 
 ```
-FROM thesuhu/docker-node-angular
+docker run -d -t -p <host port>:<your app port> -v <your app host dir>:/usr/src/myapp --name <your container name> thesuhu/docker-node-angular:{VERSION}
 ```
+
+Specify the Angular version you will use in the above *{VERSION}*. Angular version 12 is available.
 
 ## Example
 
-Don't forget to create `.dockerignore` file if using `COPY . .` command.
-
 ```
-<host directory>/node_modules
-<host directory>/.git
-<host directory>/.gitignore
+docker run -d -t -p 4200:4200 -v /home/thesuhu/helloworld:/usr/src/myapp --name frontend thesuhu/docker-node-angular:12
 ```
 
-And then create `Dockerfile` as you need.
-
-```
-FROM thesuhu/docker-node-angular
-
-RUN mkdir -p /usr/src/myapp
-WORKDIR /usr/src/myapp
-
-COPY <host directory>/package*.json ./
-
-RUN npm i --verbose
-
-COPY <host directory>/. .
-
-CMD ng serve 
-```
-
-Build the Dockerfile.
-
-```
-docker build -t <image name> .
-```
-
-Then create container with mount bind to the host project directory.
-
-```
-docker run -d -p 4200:4200 -v <host directory>:/usr/src/myapp --name <container name> <image name>
-```
-
-The application will be running well and automatically restart every time there is a change in the host directory
+Once the container is running, open a terminal inside the container and run `npm i`. Finally, run `ng serve` to start your application. The application automatically restart every time there is a change in the host directory
 
 ## License
 
