@@ -8,8 +8,11 @@ RUN apt-get update \
     && apt-get install -y apt-utils
 
 # install angular
-RUN npm install -g @angular/cli@12
+RUN npm install -g @angular/cli@14
 RUN ng -v
+
+# install ts-node
+RUN npm install -g ts-node
 
 RUN mkdir -p /usr/src/myapp
 WORKDIR /usr/src/myapp
