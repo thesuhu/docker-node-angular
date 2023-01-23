@@ -8,7 +8,7 @@ RUN apt-get update \
     && apt-get install -y apt-utils
 
 # install angular
-RUN npm install -g @angular/cli@14
+RUN npm install -g @angular/cli@9.0.7
 RUN ng version
 
 # install ts-node
