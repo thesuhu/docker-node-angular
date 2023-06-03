@@ -1,14 +1,15 @@
-FROM node:14
+FROM node:16.16.0
 
 RUN apt-get update \
     && apt-get install -y libaio1 \
     && apt-get install -y build-essential \
     && apt-get install -y unzip \
     && apt-get install -y curl \
-    && apt-get install -y apt-utils
+    && apt-get install -y apt-utils \
+    && apt-get install -y vim
 
 # install angular
-RUN npm install -g @angular/cli@9.0.7
+RUN npm install -g @angular/cli@15.0.5
 RUN ng version
 
 # install ts-node

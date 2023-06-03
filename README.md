@@ -8,15 +8,18 @@ Docker images used to create containers ready with Node.js and Angular. This doc
 
 Just run the following command to run the container:
 
-```
+```sh
 docker run -d -t -p <host port>:<your app port> -v <your app host dir>:/usr/src/myapp --name <your container name> thesuhu/docker-node-angular:{VERSION}
 ```
 
-Specify the Angular version you will use in the above *{VERSION}*. Angular version 9, 12 and 14 are available.
+Specify the Angular version you will use in the above *{VERSION}*. Angular version 9, 12, 14 and 15 are available.
+| Image Tag    | Node  | Angular |
+|--------|-------|---------|
+| 15 | v16.16.0 | v15.0.5 |
 
 ## Example
 
-```
+```sh
 docker run -d -t -p 4200:4200 -v /home/thesuhu/helloworld:/usr/src/myapp --name frontend thesuhu/docker-node-angular:12
 ```
 
