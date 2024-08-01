@@ -2,7 +2,7 @@
 
 ![GitHub workflow](https://github.com/thesuhu/docker-node-angular/actions/workflows/docker-image.yml/badge.svg) ![Docker pull](https://img.shields.io/docker/pulls/thesuhu/docker-node-angular) [![license](https://img.shields.io/github/license/thesuhu/docker-node-angular)](https://github.com/thesuhu/docker-node-angular/blob/master/LICENSE)
 
-Docker images used to create containers ready with Node.js and Angular. This docker image is recommended for development only. This image is using Node.js version 9, 12 and 14.
+Docker images used to create containers ready with Node.js and Angular. This docker image is recommended for development only.
 
 ## Usage
 
@@ -15,6 +15,7 @@ docker run -d -t -p <host port>:<your app port> -v <your app host dir>:/usr/src/
 Specify the Angular version you will use in the above *{VERSION}*. Angular version 9, 12, 14, 15 and 17 are available.
 | Image Tag    | Node  | Angular |
 |--------|-------|---------|
+| latest | v16.16.0 | v15.0.5 |
 | 17 | v18.20.0 | v17.0.8 |
 | 15 | v16.16.0 | v15.0.5 |
 
