@@ -1,4 +1,4 @@
-FROM node:16.16.0
+FROM node:18.20.4
 
 RUN apt-get update \
     && apt-get install -y libaio1 \
@@ -9,7 +9,7 @@ RUN apt-get update \
     && apt-get install -y vim
 
 # install angular
-RUN npm install -g @angular/cli@15.0.5
+RUN npm install -g @angular/cli@17.0.8
 RUN ng version
 
 # install ts-node

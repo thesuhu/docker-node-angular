@@ -12,15 +12,16 @@ Just run the following command to run the container:
 docker run -d -t -p <host port>:<your app port> -v <your app host dir>:/usr/src/myapp --name <your container name> thesuhu/docker-node-angular:{VERSION}
 ```
 
-Specify the Angular version you will use in the above *{VERSION}*. Angular version 9, 12, 14 and 15 are available.
+Specify the Angular version you will use in the above *{VERSION}*. Angular version 9, 12, 14, 15 and 17 are available.
 | Image Tag    | Node  | Angular |
 |--------|-------|---------|
+| 17 | v18.20.0 | v17.0.8 |
 | 15 | v16.16.0 | v15.0.5 |
 
 ## Example
 
 ```sh
-docker run -d -t -p 4200:4200 -v /home/thesuhu/helloworld:/usr/src/myapp --name frontend thesuhu/docker-node-angular:12
+docker run -d -t -p 4200:4200 -v /home/thesuhu/helloworld:/usr/src/myapp --name frontend thesuhu/docker-node-angular:{{version}}
 ```
 
 Once the container is running, open a terminal inside the container and run `npm i`. Finally, run `ng serve --host 0.0.0.0 --disable-host-check` to start your application. The application automatically restart every time there is a change in the host directory
