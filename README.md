@@ -15,7 +15,7 @@ docker run -d -t -p <host port>:<your app port> -v <your app host dir>:/usr/src/
 Specify the Angular version you will use in the above *{VERSION}*. Angular version 9, 12, 14, 15 and 17 are available.
 | Image Tag    | Node  | Angular |
 |--------|-------|---------|
-| latest | v16.16.0 | v15.0.5 |
+| latest | v18.20.0 | v17.0.8 |
 | 17 | v18.20.0 | v17.0.8 |
 | 15 | v16.16.0 | v15.0.5 |
 
