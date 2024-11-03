@@ -1,4 +1,4 @@
-FROM node:18.20.4
+FROM node:20.13.1
 
 RUN apt-get update \
     && apt-get install -y libaio1 \
