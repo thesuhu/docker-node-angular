@@ -1,12 +1,16 @@
-FROM node:20.13.1
+FROM node:22
 
+# Install required packages (consolidated into one layer)
 RUN apt-get update \
-    && apt-get install -y libaio1 \
-    && apt-get install -y build-essential \
-    && apt-get install -y unzip \
-    && apt-get install -y curl \
-    && apt-get install -y apt-utils \
-    && apt-get install -y vim
+    && apt-get install -y --no-install-recommends \
+       libaio1 \
+       build-essential \
+       unzip \
+       curl \
+       apt-utils \
+       vim \
+       iputils-ping \
+    && rm -rf /var/lib/apt/lists/*
 
 # install angular
 RUN npm install -g @angular/cli@17.0.8
