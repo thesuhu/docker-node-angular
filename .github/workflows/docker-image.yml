@@ -23,9 +23,9 @@ jobs:
         echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
         
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag thesuhu/docker-node-angular:latest --tag thesuhu/docker-node-angular:17.1
+      run: docker build . --file Dockerfile --tag thesuhu/docker-node-angular:latest --tag thesuhu/docker-node-angular:17.2
 
     - name: Docker Push
       run: |
         docker push thesuhu/docker-node-angular:latest
-        docker push thesuhu/docker-node-angular:17.1
+        docker push thesuhu/docker-node-angular:17.2
