@@ -1,5 +1,4 @@
 # docker-node-angular
-# docker-node-angular
 
 ![GitHub workflow](https://github.com/thesuhu/docker-node-angular/actions/workflows/docker-image.yml/badge.svg) 
 ![Docker pull](https://img.shields.io/docker/pulls/thesuhu/docker-node-angular) 
