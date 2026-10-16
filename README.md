@@ -24,6 +24,16 @@ Specify the Angular version you will use in the above *{TAG}*. Angular versions 
 | 17        | v18.20.0 | v17.0.8  |
 | 15        | v16.16.0 | v15.0.5  |
 
+## Included troubleshooting tools
+
+The image includes common tools for downloads, archives, connectivity, DNS, and
+process inspection:
+
+- `curl`, `wget`, and `unzip`
+- `ping` and `ip`
+- `dig` and `nslookup`
+- `ps` and `top`
+
 ## Example
 
 ```sh
@@ -43,4 +53,3 @@ The application will automatically restart every time there is a change in the h
 ## License
 
 [MIT](https://github.com/thesuhu/docker-node-angular/blob/master/LICENSE)
-

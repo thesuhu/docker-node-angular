@@ -7,9 +7,13 @@ RUN apt-get update \
        build-essential \
        unzip \
        curl \
+       wget \
        apt-utils \
        vim \
        iputils-ping \
+       iproute2 \
+       dnsutils \
+       procps \
     && rm -rf /var/lib/apt/lists/*
 
 # install angular
